@@ -1,0 +1,23 @@
+<ion-view view-title="Dashboard" name="dashboard-view">
+  <ion-nav-buttons side="right">
+    <button class="button icon-left ion-log-out button-stable" ng-click="logout()">Logout</button>
+  </ion-nav-buttons>
+ 
+  <ion-content class="padding">
+    <div class="row"><div class="col text-center">
+      <h3 class="title">Welcome {{username}}!</h3>
+         <br>
+      <button class="button button-full button-positive" ng-click="upload()">
+        Upload
+      </button>
+      <button class="button button-full button-energized" ng-click="pending()">
+        Pending Upload
+      </button>
+      <button class="button button-full button-assertive" ng-click="statusCheck()">
+        Status / Reupload
+      </button>
+      <br><br>
+      {{response}}
+    </div></div>
+  </ion-content>
+</ion-view>

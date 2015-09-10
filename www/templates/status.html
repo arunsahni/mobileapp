@@ -1,0 +1,17 @@
+<ion-view view-title="Status / Reupload">
+  <ion-content>
+    <div class="list" ng-init="initload()">
+      <div ng-repeat="status in dataStatus"  class="item">
+        <label class="list" ng-if="status.isescalate === 'false'">
+          <label style="font-size: 20px" >{{status.customername}}: {{status.caseid}}</label><br>
+          <label>Status: {{status.casestatus}} </label>
+        </label>
+        <label class="list" ng-if="status.isescalate === 'true'" style="color:red">
+          <label style="font-size: 20px">{{status.customername}}: {{status.caseid}}</label><br>
+          <label ng-click="openPopover($event)">Reject Reason: {{status.reason}} </label>
+        </label>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
+

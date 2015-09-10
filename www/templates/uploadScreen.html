@@ -1,0 +1,43 @@
+<ion-view view-title="Upload" name="login-view">
+    <ion-content>
+        <div class="list">
+            <label class="item item-input item-select">
+                <div class="input-label">
+                  Program
+                </div>
+                <select ng-model="doc_obj.program">
+                    <option>Hero Honda</option>
+                    <option selected>Fast Track</option>
+                    <option>M80</option>
+                </select>
+            </label>
+            <label class="item-input item-select">
+                 <div class="input-label">
+                  Product
+                </div>
+                <select ng-model="doc_obj.product" ng-options="usersubdoc for usersubdoc in userdropdownproducttype">
+                </select>
+            </label>
+
+
+            <label class="item item-input">
+                <input type="text" placeholder="Name" ng-model="doc_obj.name">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="Comment" ng-model="doc_obj.comment">
+            </label>
+            <label class="item item-input">
+                <input type="number" placeholder="Mobile Number" ng-model="doc_obj.mobile">
+            </label>
+            <button class="bar button button-balanced" ng-click="addDoc(doc_obj,$index)">
+                <a class="title button button-icon icon ion-plus"> Add Document </a>
+            </button>
+
+        </div>
+        
+    </ion-content>
+    <button class="bar bar-footer bar-balanced" ng-click="uploadData()">
+        <a class="title button button-icon icon ion-android-upload "> Upload </a>
+    </button>
+   
+</ion-view>

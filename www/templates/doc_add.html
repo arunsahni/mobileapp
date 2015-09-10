@@ -1,0 +1,33 @@
+<ion-view view-title="Add Document">
+  <ion-content>
+    <label class="item item-input item-select">
+      <div class="input-label">
+        Document
+       </div>
+      <select ng-model="selectedDoc.value" ng-options="userdoc for userdoc in documentlist">
+        <option value="" selected>Select Document</option>
+      </select>
+    </label>
+
+    <div class="list">  
+      <!-- <div class="row item" ng-repeat="img in [1,2,3,4,5,6,7,8,9,10]">
+        <div class="col col-90"></div>
+        <div class="col ion-ios-camera" ng-click=""></div>
+      </div>
+    </div>
+     -->
+    <div class="item item-button-right" ng-repeat="img in imgs track by $index">
+        <img ng-src="{{img.url}}" width=50 height=50/>
+        <button class="button button-positive" ng-click="takePicture($index)">
+          <i class="icon ion-ios-camera"></i>
+        </button>
+    </div>
+</div>
+
+      
+  </ion-content>
+   <button class="bar bar-footer bar-balanced" ng-click="saveDoc(selectedDoc)">
+        <a class="title button button-icon icon ion-bookmark "> Save Document </a>
+    </button>
+</ion-view>
+
